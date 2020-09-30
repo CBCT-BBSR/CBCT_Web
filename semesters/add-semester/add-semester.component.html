@@ -1,0 +1,70 @@
+<div class="app-content content">
+    <div class="content-wrapper">
+      <div class="content-wrapper-before"></div>
+      <div class="content-header row">
+        <!-- <div class="content-header-left col-md-4 col-12 mb-2">
+          <h3 class="content-header-title">Basic Form Elements</h3>
+        </div> -->
+        <div class="content-header-right col-md-8 col-12">
+          <div class="breadcrumbs-top float-md-right">
+            <div class="breadcrumb-wrapper mr-1">
+              <!-- <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">Form Elements
+                </li>
+              </ol> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-body">
+<section class="textarea-select">
+<!-- Textarea start -->
+<div class="row">
+    <div class="col-12 mt-3 mb-1">
+        <h4 class="text-uppercase"></h4>
+    </div>
+</div>
+<div class="row match-height">
+    <div class="col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">{{title}}</h4>
+            </div>
+            <div class="card-block">
+                <div class="card-body">
+                    <form [formGroup]="addsemesterForm" (ngSubmit)="onSubmit()">
+        
+                    <h5 class="mt-2">Semester No</h5>
+                    <fieldset class="form-group">
+                        <input type="number" name="semester_no" formControlName="semester_no" class="form-control" placeholder="Enter Semester No"[ngClass]="{ 'is-invalid': submitted && f.semester_no.errors }"/>
+                        <div *ngIf="submitted && f.semester_no.errors" class="invalid-feedback">
+                            <div *ngIf="f.semester_no.errors.required">Semester No is required</div>
+                        </div>
+                   
+                    </fieldset>
+                    <h5 class="mt-2">Semester Id</h5>
+                    <fieldset class="form-group">
+                        <input type="text" name="semester_id" formControlName="semester_id"  class="form-control" placeholder="Enter Semester" [ngClass]="{ 'is-invalid': submitted && f.semester_id.errors }"/>
+                        <div *ngIf="submitted && f.semester_id.errors" class="invalid-feedback">
+                            <div *ngIf="f.semester_id.errors.required">Semester Id is required</div>
+                        </div>
+                  
+                    </fieldset>
+                    
+                    
+                    <fieldset class="form-group">
+                        <input type="submit" name="add-batch" class="form-control" placeholder=" SUBMIT">
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Textarea end -->
+</section>
+      </div>
+    </div>
+  </div>
