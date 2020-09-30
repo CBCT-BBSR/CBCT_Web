@@ -1,0 +1,71 @@
+<div class="app-content content">
+    <div class="content-wrapper">
+      <div class="content-wrapper-before"></div>
+      <div class="content-header row">
+        <div class="content-header-left col-md-4 col-12 mb-2">
+          <h3 class="content-header-title">Tables</h3>
+        </div>
+        <div class="content-header-right col-md-8 col-12">
+          <div class="breadcrumbs-top float-md-right">
+            <div class="breadcrumb-wrapper mr-1">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">Tables
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-body"><!-- Basic Tables start -->
+  <div class="row">
+  <div class="col-12">
+      <div class="card">
+          <div class="card-header">
+              <h4 class="card-title">Baskets</h4>
+              <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+              <div class="heading-elements">
+                  <ul class="list-inline mb-0">
+                      
+                      <li><input name="search" class="form-control" (input)="search($event)" placeholder="Search Basket"></li>
+                     
+                      <li><a routerLink="/add-basket" class="btn btn-default">Add Basket</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="card-content collapse show">
+              <div class="card-body">
+                
+                  <div class="table-responsive">
+                      <table class="table">
+                          <thead>
+                              <tr>
+                                  <th>#</th>
+                                  <th>Basket Id</th>
+                                  <th>Basket Credit</th>
+                                  <th>Action</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let list of baList">
+                                  <th scope="row">{{list.basket_no}}</th>
+                                  <td>{{list.basket_id}}</td>
+                                  <td>{{list.basket_credit}}</td>
+                                  <td><a class="btn btn-info" routerLink="/edit-basket/{{list.basket_id}}"><i class="la la-edit"></i></a></td>
+                              </tr>
+                            
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  <!-- Basic Tables end -->
+  
+  
+      </div>
+    </div>
+  </div>
