@@ -1,0 +1,94 @@
+<div class="app-content content">
+    <div class="content-wrapper">
+      <div class="content-wrapper-before"></div>
+      <div class="content-header row">
+        <!-- <div class="content-header-left col-md-4 col-12 mb-2">
+          <h3 class="content-header-title">Basic Form Elements</h3>
+        </div> -->
+        <div class="content-header-right col-md-8 col-12">
+          <div class="breadcrumbs-top float-md-right">
+            <div class="breadcrumb-wrapper mr-1">
+              <!-- <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">Form Elements
+                </li>
+              </ol> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-body">
+<section class="textarea-select">
+<!-- Textarea start -->
+<div class="row">
+    <div class="col-12 mt-3 mb-1">
+        <h4 class="text-uppercase"></h4>
+    </div>
+</div>
+<div class="row match-height">
+    <div class="col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">{{title}}</h4>
+            </div>
+            <div class="card-block">
+                <div class="card-body">
+                    <form [formGroup]="addfacultyForm" (ngSubmit)="onSubmit()">
+        
+                    <h5 class="mt-2">Faculty Id</h5>
+                    <fieldset class="form-group">
+                        <input type="number" name="facultyid" formControlName="facultyid" class="form-control" placeholder="Enter Faculty Id"[ngClass]="{ 'is-invalid': submitted && f.facultyid.errors }"/>
+                        <div *ngIf="submitted && f.facultyid.errors" class="invalid-feedback">
+                            <div *ngIf="f.facultyid.errors.required">Faculty Id is required</div>
+                        </div>
+                   
+                    </fieldset>
+                    <h5 class="mt-2">Faculty Name</h5>
+                    <fieldset class="form-group">
+                        <input type="text" name="facultyname" formControlName="facultyname"  class="form-control" placeholder="Enter Faculty Name" [ngClass]="{ 'is-invalid': submitted && f.facultyname.errors }"/>
+                        <div *ngIf="submitted && f.facultyname.errors" class="invalid-feedback">
+                            <div *ngIf="f.facultyname.errors.required">Faculty Name is required</div>
+                        </div>
+                  
+                    </fieldset>
+                    <h5 class="mt-2">Password</h5>
+                    <fieldset class="form-group">
+                        <input type="text" name="password" formControlName="password" class="form-control" placeholder="Enter Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                        </div>
+                 
+                    </fieldset>
+                    <h5 class="mt-2">Email id</h5>
+                    <fieldset class="form-group">
+                        <input type="text" name="email" formControlName="email" class="form-control" placeholder="Enter Email Id" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email Id is required</div>
+                        </div>
+                  
+                    </fieldset>
+                    
+                    <h5 class="mt-2">Designation</h5>
+                    <fieldset class="form-group">
+                        <input type="text" name="designation" formControlName="designation" class="form-control" placeholder="Enter Enter Designation" [ngClass]="{ 'is-invalid': submitted && f.designation.errors }"/>
+                        <div *ngIf="submitted && f.designation.errors" class="invalid-feedback">
+                            <div *ngIf="f.designation.errors.required">Designation is required</div>
+                        </div>
+                   
+                    </fieldset>
+                    
+                    <fieldset class="form-group">
+                        <input type="submit" name="add-faculty" class="form-control" placeholder=" SUBMIT">
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Textarea end -->
+</section>
+      </div>
+    </div>
+  </div>
