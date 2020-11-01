@@ -1,0 +1,70 @@
+<div class="app-content content">
+    <div class="content-wrapper">
+      <div class="content-wrapper-before"></div>
+      <div class="content-header row">
+        <!-- <div class="content-header-left col-md-4 col-12 mb-2">
+          <h3 class="content-header-title">Basic Form Elements</h3>
+        </div> -->
+        <div class="content-header-right col-md-8 col-12">
+          <div class="breadcrumbs-top float-md-right">
+            <div class="breadcrumb-wrapper mr-1">
+              <!-- <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">Form Elements
+                </li>
+              </ol> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-body">
+<section class="textarea-select">
+<!-- Textarea start -->
+<div class="row">
+    <div class="col-12 mt-3 mb-1">
+        <h4 class="text-uppercase"></h4>
+    </div>
+</div>
+<div class="row match-height">
+    <div class="col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">{{title}}</h4>
+            </div>
+            <div class="card-block">
+                <div class="card-body">
+                    <form [formGroup]="addbatchForm" (ngSubmit)="onSubmit()">
+        
+                    <h5 class="mt-2">Batch No</h5>
+                    <fieldset class="form-group">
+                        <input type="number" name="batch_no" formControlName="batch_no" class="form-control" placeholder="Enter Batch No"[ngClass]="{ 'is-invalid': submitted && f.batch_no.errors }"/>
+                        <div *ngIf="submitted && f.batch_no.errors" class="invalid-feedback">
+                            <div *ngIf="f.batch_no.errors.required">Batch No is required</div>
+                        </div>
+                   
+                    </fieldset>
+                    <h5 class="mt-2">Batch Id</h5>
+                    <fieldset class="form-group">
+                        <input type="text" name="batch_id" formControlName="batch_id"  class="form-control" placeholder="Enter Batch" [ngClass]="{ 'is-invalid': submitted && f.batch_id.errors }"/>
+                        <div *ngIf="submitted && f.batch_id.errors" class="invalid-feedback">
+                            <div *ngIf="f.batch_id.errors.required">Batch Id is required</div>
+                        </div>
+                  
+                    </fieldset>
+                    
+                    
+                    <fieldset class="form-group">
+                        <input type="submit" name="add-batch" class="form-control" placeholder=" SUBMIT">
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Textarea end -->
+</section>
+      </div>
+    </div>
+  </div>
